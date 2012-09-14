@@ -6,6 +6,8 @@
 	<title>Laravel: A Framework For Web Artisans</title>
 	<meta name="viewport" content="width=device-width">
 	{{ HTML::style('laravel/css/style.css') }}
+	{{ HTML::style('bundles/bootstrap/css/bootstrap.min.css') }}
+	{{ HTML::style('bundles/bootstrap/css/bootstrap-responsive.min.css') }}
 </head>
 <body>
 	<div class="wrapper">
@@ -53,5 +55,8 @@
 			</div>
 		</div>
 	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+   <script>window.jQuery || document.write('<script src="js/jquery-1.8.1.min.js"><\/script>')</script>
+	{{ HTML::script('bundles/bootstrap/js/bootstrap.min.js') }}
 </body>
 </html>
