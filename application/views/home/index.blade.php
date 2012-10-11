@@ -1,62 +1,22 @@
-<!doctype html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Laravel: A Framework For Web Artisans</title>
-	<meta name="viewport" content="width=device-width">
-	{{ HTML::style('laravel/css/style.css') }}
-	{{ HTML::style('bundles/bootstrap/css/bootstrap.min.css') }}
-	{{ HTML::style('bundles/bootstrap/css/bootstrap-responsive.min.css') }}
-</head>
-<body>
-	<div class="wrapper">
-		<header>
-			<h1>Laravel</h1>
-			<h2>A Framework For Web Artisans</h2>
+@layout('layouts/main')
 
-			<p class="intro-text" style="margin-top: 45px;">
-			</p>
-		</header>
-		<div role="main" class="main">
-			<div class="home">
-				<h2>Learn the terrain.</h2>
-
-				<p>
-					You've landed yourself on our default home page. The route that
-					is generating this page lives at:
-				</p>
-
-				<pre>{{ path('app') }}routes.php</pre>
-
-				<p>And the view sitting before you can be found at:</p>
-
-				<pre>{{ path('app') }}views/home/index.blade.php</pre>
-
-				<h2>Grow in knowledge.</h2>
-
-				<p>
-					Learning to use Laravel is amazingly simple thanks to
-					its {{ HTML::link('docs', 'wonderful documentation') }}.
-				</p>
-
-				<h2>Create something beautiful.</h2>
-
-				<p>
-					Now that you're up and running, it's time to start creating!
-					Here are some links to help you get started:
-				</p>
-
-				<ul class="out-links">
-					<li><a href="http://laravel.com">Official Website</a></li>
-					<li><a href="http://forums.laravel.com">Laravel Forums</a></li>
-					<li><a href="http://github.com/laravel/laravel">GitHub Repository</a></li>
-				</ul>
-			</div>
+@section('content')
+	<div class="hero-unit clearfix">
+		<div class="pull-left span5">
+			<h1>Vectorwyse Project Seed</h1>
+			<p>Use this template as a way to quick start any new project.</p>
+		</div>
+		<div class="pull-right">
+			<form class="well" method="POST" action="user/login">
+				<label>Email</label>
+				<input name="email" type="text" class="span3" placeholder="Type your email">
+				<label>Password</label>
+				<input name="password" type="password" class="span3" placeholder="Type your password">
+				<label class="checkbox">
+				<input name="remember" type="checkbox">Remember me</label>
+				<input class="btn btn-primary" type="submit" value="Sign In" />
+			</form>
 		</div>
 	</div>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-   <script>window.jQuery || document.write('<script src="js/jquery-1.8.1.min.js"><\/script>')</script>
-	{{ HTML::script('bundles/bootstrap/js/bootstrap.min.js') }}
-</body>
-</html>
+
+@endsection

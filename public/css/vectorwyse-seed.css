@@ -1,0 +1,10 @@
+body {
+  padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+
+form input[type="submit"]{
+	clear: left;
+	width: 100%;
+	height: 32px;
+	font-size: 13px;
+}
