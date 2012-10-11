@@ -22,11 +22,9 @@
 				</a>
 				<a class="brand" href="#">Vectorwyse Seed</a>
 				<div class="nav-collapse collapse">
-					<ul class="nav">
-						<li class="active">
-							<a href="#">Home</a>
-						</li>
-					</ul>
+					@if (Auth::check())
+						@include('plugins.nav')
+					@endif
 					<ul class="nav pull-right">
 						@if (Auth::check())
 						<li>

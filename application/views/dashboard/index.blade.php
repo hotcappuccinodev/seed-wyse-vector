@@ -7,7 +7,7 @@
 			<p>Use this template as a way to quick start any new project.</p>
 		</div>
 		<div class="pull-right">
-			<p>You are logged in to the Dashboard</p>
+			<p>Welcome {{ Auth::user()->firstname }}! <br/> You are logged in to the Dashboard</p>
 		</div>
 	</div>
 
