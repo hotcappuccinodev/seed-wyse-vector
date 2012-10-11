@@ -21,11 +21,14 @@ class Create_Users {
 			$table->timestamps();
 		});
 
-		DB::table('users')->insert(array(
+		$user = new User(array(
+			'firstname' => 'Admin',
+			'lastname' => 'Admin',
 			'email' => 'admin@vectorwyse.com',
-			'password' => Hash::make('admin')
+			'password' => Hash::make('admin'),
+			'active' => true
 		));
-
+		$user->save();
 
 	}
 
